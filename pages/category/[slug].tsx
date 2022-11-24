@@ -11,7 +11,7 @@ import {
   PostDetailsWrapper,
   RightContainer,
   RightWrapper,
-} from "../post/styles";
+} from "../../styles/styles";
 import Spinner from "../../components/PostWidget/Spinner";
 
 interface IProps {
@@ -44,7 +44,7 @@ export const getServerSideProps = async ({
   params: { slug: string };
 }) => {
   const posts = await client.fetch(getCategoryPostDetails(slug));
-  
+
   return {
     props: {
       posts,

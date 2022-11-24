@@ -15,21 +15,20 @@ import {
   PostDetailsWrapper,
   RightContainer,
   RightWrapper,
-} from "./styles";
+} from "../../styles/styles";
 
 interface IProps {
   posts: Post[];
 }
 
 const PostDetails: NextPage<IProps> = ({ posts }) => {
-
   return (
     <PostDetailsContainer>
       {posts.map((post: Post) => (
         <PostDetailsWrapper key={post.title}>
           <LeftContainer>
             <PostDetail post={post} />
-            <Author author={post?.createdBy}  />
+            <Author author={post?.createdBy} />
             <CommentsForm id={post._id} />
             <Comments comment={post.comments} />
           </LeftContainer>

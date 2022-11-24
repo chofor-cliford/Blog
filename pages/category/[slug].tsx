@@ -19,7 +19,7 @@ interface IProps {
 }
 
 const CategoryPost: NextPage<IProps> = ({ posts }) => {
-  if (posts.length < 1) return <Spinner message="Loading..." />;
+  if (posts?.length < 1) return <Spinner message="Loading..." />;
   return (
     <PostDetailsContainer>
       <PostDetailsWrapper>

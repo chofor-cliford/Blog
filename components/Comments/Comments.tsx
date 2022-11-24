@@ -16,7 +16,7 @@ interface IProps {
 const Comments: NextPage<IProps> = ({ comment }) => {
   return (
     <>
-      {comment.length > 0 && (
+      {comment?.length > 0 && (
         <CommentContainer>
           <CommentTitle>
             {comment.length}

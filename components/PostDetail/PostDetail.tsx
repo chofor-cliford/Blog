@@ -47,7 +47,7 @@ const PostDetail: NextPage<IProp> = ({ post }) => {
         </DateContainer>
       </AuthorContainer>
         <PostTitle>{post.title}</PostTitle>
-        <Content>{post.content}</Content>
+        <Content>{post?.content}</Content>
     </PostDetailContainer>
   );
 };

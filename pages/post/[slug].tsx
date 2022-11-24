@@ -30,7 +30,7 @@ const PostDetails: NextPage<IProps> = ({ posts }) => {
             <PostDetail post={post} />
             <Author author={post?.createdBy} />
             <CommentsForm id={post._id} />
-            <Comments comment={post.comments} />
+            <Comments comment={post?.comments} />
           </LeftContainer>
           <RightContainer>
             <RightWrapper>

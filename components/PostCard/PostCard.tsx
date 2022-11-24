@@ -57,7 +57,7 @@ const PostCard: NextPage<IProps> = ({ post }) => {
         </DateContainer>
       </AuthorContainer>
       <Excerpt>{post.excerpt}</Excerpt>
-      <ButtonContainer>
+      <ButtonContainer href={`/post/${post.slug.current}`}>
         <Button>
           <ButtonText>Continue reading...</ButtonText>
         </Button>

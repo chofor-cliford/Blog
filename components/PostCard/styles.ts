@@ -98,11 +98,12 @@ export const Excerpt = styled.span`
   }
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.a`
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 `;
 
 export const Button = styled.div`

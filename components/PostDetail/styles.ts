@@ -24,4 +24,6 @@ export const Content = styled.div`
   display: flex;
   padding: 0 10px;
   flex-direction: column;
+  gap: 10px;
+;
 `;

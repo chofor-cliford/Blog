@@ -30,15 +30,11 @@ const components = {
       <Image
         src={urlFor(value).width(900).url()}
         alt={value.alt || "blog-image "}
-        style={{
-          display: "flex",
-        }}
         width={180}
         height={200}
       />
     ),
   },
-  
 };
 
 const PostDetail: NextPage<IProp> = ({ post }) => {

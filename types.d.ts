@@ -64,9 +64,28 @@ export interface Post {
       current: string;
     };
   };
-  content: string;
+  content: {
+    _key: string;
+    _type: string;
+    style: string;
+    children: {
+      _key: string;
+      _type: string;
+      marks: string[];
+      text: string;
+    }[];
+    markDefs: {
+      _key: string;
+      _type: string;
+      href: string;
+    }[];
+    asset: {
+      url: string;
+    };
+    listItem: string;
+  }[];
   _id: string;
-  comments:{
+  comments: {
     _key: string;
     name: string;
     comment: string;

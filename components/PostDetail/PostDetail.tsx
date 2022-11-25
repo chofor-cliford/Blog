@@ -5,6 +5,7 @@ import React from "react";
 import { MdCalendarToday } from "react-icons/md";
 import { Post } from "../../types";
 import { urlFor } from "../../utils/client";
+import { PortableText } from "@portabletext/react";
 import {
   AuthorContainer,
   AuthorImg,
@@ -12,11 +13,33 @@ import {
   AuthorWrapper,
   DateContainer,
 } from "../PostCard/styles";
-import { Content, ImgContainer, PostDetailContainer, PostTitle } from "./styles";
+import {
+  Content,
+  ImgContainer,
+  PostDetailContainer,
+  PostTitle,
+} from "./styles";
 
 interface IProp {
   post: Post;
 }
+
+const components = {
+  types: {
+    image: ({ value }: any) => (
+      <Image
+        src={urlFor(value).width(900).url()}
+        alt={value.alt || "blog-image "}
+        style={{
+          display: "flex",
+        }}
+        width={180}
+        height={200}
+      />
+    ),
+  },
+  
+};
 
 const PostDetail: NextPage<IProp> = ({ post }) => {
   return (
@@ -46,8 +69,10 @@ const PostDetail: NextPage<IProp> = ({ post }) => {
           <span>{moment(post._createdAt).format("MMM DD, YYYY")}</span>
         </DateContainer>
       </AuthorContainer>
-        <PostTitle>{post.title}</PostTitle>
-        <Content>{post?.content}</Content>
+      <PostTitle>{post.title}</PostTitle>
+      <Content>
+        <PortableText components={components} value={post.content} />
+      </Content>
     </PostDetailContainer>
   );
 };

@@ -107,7 +107,7 @@ export const getPostDetails = (slug: string) => {
                 current
             }
         },
-        content,
+        content[],
         _id,
         comments[]{
             name,
@@ -174,7 +174,8 @@ export const getCategoryPostDetails = (slug: string) => {
                 current
             }
         },
-        content,
+        content[],
+        },
         _id,
         comments[]{
             name,

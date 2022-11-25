@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PostDetailContainer = styled.div`
   background: #fff;
@@ -6,7 +6,6 @@ export const PostDetailContainer = styled.div`
   border-radius: 10px;
   padding-bottom: 12px;
   margin: 8px 0;
-
 `;
 
 export const ImgContainer = styled.div`
@@ -17,11 +16,12 @@ export const ImgContainer = styled.div`
 
 export const PostTitle = styled.h1`
   margin-bottom: 8px;
- text-align: center;
+  text-align: center;
 `;
 
 export const Content = styled.div`
   text-align: center;
   display: flex;
   padding: 0 10px;
+  flex-direction: column;
 `;

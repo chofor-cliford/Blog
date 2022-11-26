@@ -38,5 +38,5 @@ export const H3 = styled.h3`
 
 export const Ul = styled.ul`
   margin-left: 18px;
-  gap: 7px;
+  gap: 10px;
 `;

@@ -21,6 +21,7 @@ import {
   ImgContainer,
   PostDetailContainer,
   PostTitle,
+  Ul,
 } from "./styles";
 
 interface IProp {
@@ -42,6 +43,9 @@ const components = {
     h1: ({ children }: any) => <H1>{children}</H1>,
     h2: ({ children }: any) => <H2>{children}</H2>,
     h3: ({ children }: any) => <H3>{children}</H3>,
+  },
+  list: {
+    bullet: ({ children }: any) => <Ul>{children}</Ul>,
   },
 };
 

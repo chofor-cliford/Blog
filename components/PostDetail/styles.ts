@@ -35,3 +35,7 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   color: rgba(0, 0, 255, 0.4);
 `;
+
+export const Ul = styled.ul`
+  margin-left: 12px;
+`;

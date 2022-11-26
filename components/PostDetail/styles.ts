@@ -37,5 +37,5 @@ export const H3 = styled.h3`
 `;
 
 export const Ul = styled.ul`
-  margin-left: 12px;
+  margin-left: 18px;
 `;

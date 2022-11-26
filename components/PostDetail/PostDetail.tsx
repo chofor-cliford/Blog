@@ -19,6 +19,7 @@ import {
   H2,
   H3,
   ImgContainer,
+  Ol,
   PostDetailContainer,
   PostTitle,
   Ul,
@@ -46,7 +47,7 @@ const components = {
   },
   list: {
     bullet: ({ children }: any) => <Ul>{children}</Ul>,
-    number: ({ children }: any) => <Ul>{children}</Ul>,
+    number: ({ children }: any) => <Ol>{children}</Ol>,
   },
 };
 

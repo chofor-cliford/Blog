@@ -40,3 +40,7 @@ export const Ul = styled.ul`
   margin-left: 18px;
   gap: 10px;
 `;
+export const Ol = styled.ol`
+  margin-left: 18px;
+  gap: 10px;
+`;

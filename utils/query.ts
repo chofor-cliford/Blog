@@ -79,7 +79,8 @@ export const getCategories = () => {
 };
 
 export const getPostDetails = (slug: string) => {
-  const query = `*[_type == "post" &&  slug.current == '${slug}'] {
+    const query = `*[_type == "post" &&  slug.current == '${slug}'] {
+      _id,
         image {
             asset ->{
                 url
@@ -89,26 +90,25 @@ export const getPostDetails = (slug: string) => {
             name,
             _id,
             image {
-                asset ->{
+                asset->{
                     url
                 }
             },
             description
         },
         _createdAt,
-        slug{
+        slug {
             current
         },
         title,
         excerpt,
         category -> {
             name,
-            slug{
+            slug {
                 current
             }
         },
         content[],
-        _id,
         comments[]{
             name,
             _key,
@@ -141,12 +141,13 @@ export const getFeaturedPost = () => {
             description
         }
     }`;
-
-  return query;
+    
+    return query;
 };
 
 export const getCategoryPostDetails = (slug: string) => {
-  const query = `*[_type == "post" &&  slug.current match '${slug}*'] {
+    const query = `*[_type == "post" &&  slug.current match '${slug}*'] {
+      _id,
         image {
             asset ->{
                 url
@@ -175,8 +176,6 @@ export const getCategoryPostDetails = (slug: string) => {
             }
         },
         content[],
-        },
-        _id,
         comments[]{
             name,
             _key,

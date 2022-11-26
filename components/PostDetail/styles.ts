@@ -20,10 +20,18 @@ export const PostTitle = styled.h1`
 `;
 
 export const Content = styled.div`
-  text-align: center;
   display: flex;
   padding: 0 10px;
   flex-direction: column;
-  gap: 10px;
-;
+  gap: 10px; ;
+`;
+
+export const H1 = styled.h1`
+  color: rgba(0, 0, 255, 0.4);
+`;
+export const H2 = styled.h2`
+  color: rgba(0, 0, 255, 0.4);
+`;
+export const H3 = styled.h3`
+  color: rgba(0, 0, 255, 0.4);
 `;

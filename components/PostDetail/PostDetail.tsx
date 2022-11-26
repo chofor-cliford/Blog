@@ -15,6 +15,9 @@ import {
 } from "../PostCard/styles";
 import {
   Content,
+  H1,
+  H2,
+  H3,
   ImgContainer,
   PostDetailContainer,
   PostTitle,
@@ -34,6 +37,11 @@ const components = {
         height={320}
       />
     ),
+  },
+  block: {
+    h1: ({ children }: any) => <H1>{children}</H1>,
+    h2: ({ children }: any) => <H2>{children}</H2>,
+    h3: ({ children }: any) => <H3>{children}</H3>,
   },
 };
 

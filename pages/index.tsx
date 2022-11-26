@@ -28,8 +28,8 @@ const Home: NextPage<IProps> = ({ posts }) => {
       <FeaturedPost />
       <PostContainer>
         <PostWrapper>
-          {posts.map((post) => (
-            <PostCard post={post} key={post.title} />
+          {posts.map((post, i) => (
+            <PostCard post={post} key={i} />
           ))}
         </PostWrapper>
         <RightPost>

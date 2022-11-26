@@ -29,12 +29,14 @@ const PostCard: NextPage<IProps> = ({ post }) => {
   return (
     <PostCardContainer>
       <ImgContainer>
-        <Image
-          src={urlFor(post.image).width(800).sharpen(20).url()}
-          alt={post.title}
-          style={{ borderRadius: "10px 10px 0 0" }}
-          layout="fill"
-        />
+        {post.image && (
+          <Image
+            src={urlFor(post.image).width(800).sharpen(20).url()}
+            alt={post.title}
+            style={{ borderRadius: "10px 10px 0 0" }}
+            layout="fill"
+          />
+        )}
       </ImgContainer>
       <TitleContainer href={`/post/${post.slug.current}`}>
         <Title>{post.title}</Title>

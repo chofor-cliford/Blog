@@ -42,7 +42,9 @@ const PostDetail: NextPage<IProp> = ({ post }) => {
     <PostDetailContainer>
       <ImgContainer>
         <Image
-          src={urlFor(post.image).width(800).url()}
+          src={urlFor(post.image && post.image)
+            .width(800)
+            .url()}
           alt={post.title}
           style={{ borderRadius: "10px" }}
           layout="fill"

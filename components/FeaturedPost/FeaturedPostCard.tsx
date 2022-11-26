@@ -26,7 +26,9 @@ interface IProps {
 const FeaturedPostCard: NextPage<IProps> = ({ post }) => {
   return (
     <FeaturedPostCardContainer>
-      <FeaturedPostImage image={urlFor(post.image).width(700).url()} />
+      {post.image && (
+        <FeaturedPostImage image={urlFor(post.image).width(700).url()} />
+      )}
       <FeaturedPostContent />
       <FeaturedPostContentWrapper>
         <PostCreation>

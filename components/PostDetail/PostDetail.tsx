@@ -28,10 +28,10 @@ const components = {
   types: {
     image: ({ value }: any) => (
       <Image
-        src={urlFor(value).width(900).url()}
+        src={urlFor(value).width(900).quality(20).url()}
         alt={value.alt || "blog-image "}
-        width={180}
-        height={200}
+        width={900}
+        height={320}
       />
     ),
   },

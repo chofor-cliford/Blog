@@ -38,9 +38,13 @@ export const H3 = styled.h3`
 
 export const Ul = styled.ul`
   margin-left: 18px;
-  gap: 10px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
 `;
 export const Ol = styled.ol`
   margin-left: 18px;
-  gap: 10px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
 `;

@@ -114,7 +114,7 @@ export const getPostDetails = (slug: string) => {
             _key,
             comment,
         }
-    }[0]`;
+    }`;
 
   return query;
 };
